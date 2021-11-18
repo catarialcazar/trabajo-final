@@ -13,21 +13,7 @@ p {
     font: 400 1rem/1.625rem "Lora";
 }
 
-a {
-    color: #676861;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #f29bb2;
-}
-
-#btn-back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-}
+/* ----- Home ----- */
 
 #myname-container {
     background: linear-gradient(45deg, #ffa3b5 10%, #8094dd 70%), url(img/imagen-de-referencia.jpg);
@@ -40,13 +26,80 @@ a:hover {
     height: auto;
 }
 
+/* ----- Offcanvas menu ----- */
+
+@media (max-width: 991.98px) {
+    .offcanvas-collapse {
+        position: fixed;
+        top: 56px; /* Height of navbar */
+        bottom: 0;
+        left: 100%;
+        width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        overflow-y: auto;
+        visibility: hidden;
+        transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    }
+    .offcanvas-collapse.open {
+        visibility: visible;
+        transform: translateX(-100%);
+    }
+}
+
+/* ----- Links/buttons/project section ----- */
+
+/*style of the back-to-top button*/
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    display: none;
+}
+
 .btn-outline-dark {
     color: #f29bb2;
-    border: 0px;
+    background-color: none;
+    border: none;
 }
+
 .btn-outline-dark:hover {
+    color: #fff;
     background-color: #f29bb2;
-    border: 0px;
+    border-color: #f0809e;
+}
+
+.btn-outline-dark:focus,
+.btn-outline-dark.focus {
+    box-shadow: 0 0 0 3px rgba(255, 163, 181, 1);
+}
+
+.btn-outline-dark.disabled,
+.btn-outline-dark:disabled {
+    background-color: #f29bb2;
+    border-color: #f29bb2;
+}
+
+.btn-outline-dark:active,
+.btn-outline-dark.active,
+.show > .btn-outline-dark.dropdown-toggle {
+    background-color: #f0809e;
+    background-image: none;
+    border-color: #f0809e;
+}
+
+a {
+    color: #676861;
+    text-decoration: none;
+}
+
+.nav-link-color:hover {
+    color: #f29bb2 !important;
+}
+
+a:hover {
+    color: #f29bb2;
 }
 
 .btn-outline-danger {
@@ -66,6 +119,8 @@ a:hover {
         flex: 1;
     }
 }
+
+/* ----- Contact 
 
 .form-1 {
     padding-top: 8.25rem;
@@ -110,10 +165,88 @@ a:hover {
 
 .form-1 .fa-stack:hover .fa-stack-1x {
     color: #ffffff;
+}----- */
+
+/* ----- Portfolio transition ----- */
+
+.overlay-transition::before {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #8094dd;
+    left: 0;
+    top: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    transition: 0.2s ease-in;
 }
 
-.copyright {
-    padding-top: 1.75rem;
-    padding-bottom: 0.625rem;
-    border-top: 1px solid #d2d3cc;
+.overlay-transition::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #f29bb2;
+    left: 0;
+    top: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    transition: 0.2s ease-in;
+}
+
+.overlay-transition .overlay-inner-transition {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.overlay-transition .overlay-inner-transition h5 {
+    -webkit-transform: translateX(-40px);
+    transform: translateX(-40px);
+    opacity: 0;
+    transition: 0.2s ease;
+    transition-delay: 0s;
+}
+
+.overlay-transition .overlay-inner-transition p {
+    color: #fff;
+    -webkit-transform: translateX(-16px);
+    transform: translateX(-16px);
+    opacity: 0;
+    transition: 0.2s ease;
+    transition-delay: 0s;
+}
+
+.transition:hover .overlay-transition::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.transition:hover .overlay-transition::after {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    transition-delay: 0.3s;
+}
+
+.transition:hover .overlay-inner-transition h5 {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+    transition-delay: 0.4s;
+}
+
+.transition:hover .overlay-inner-transition p {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+    transition-delay: 0.5s;
 }

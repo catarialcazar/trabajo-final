@@ -10,50 +10,38 @@
         <!--basado en el tema "product" de bootstrap https://getbootstrap.com/docs/5.0/examples/product/-->
     </head>
     <body>
-        <div id="myname-container" class="position-relative overflow-hidden px-3 py-5 vh-100 text-center">
+        <div id="myname-container" class="position-relative overflow-hidden align-items-center text-center">
             <div class="col-md-5 p-lg-5 mx-auto my-5">
                 <p class="lead fw-normal">Hi there, I'm</p>
                 <h1 class="display-5 fw-bold">Catalina Rivera</h1>
                 <p class="lead fw-normal">and I'm an aspiring <span id="lines"></span></p>
                 <a class="page-scroll fas fa-chevron-down" href="#about"></a>
             </div>
-            <div class="product-device shadow-sm d-none d-md-block"></div>
-            <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
         </div>
 
         <header class="site-header sticky-top">
-            <button type="button" class="btn btn-outline-dark btn-floating btn-lg" id="btn-back-to-top" style="border-radius: 50%;">
-                <i class="fas fa-arrow-up"></i>
-            </button>
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="index.html"><img src="img/logo.svg" height="30" class="d-block mx-auto" /></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="container-fluid px-3 px-md-5">
+                    <a class="navbar-brand px-3" href="index.html"><img src="img/logo.svg" alt="Logo" title="Logo" height="30" class="d-block mx-auto" /></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse text-center" id="navbarTogglerDemo02">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a href="#">About</a>
+                    <div class="offcanvas offcanvas-end text-center pt-5 pt-lg-0" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                        <ul class="navbar-nav justify-content-between">
+                            <li class="navbar-nav me-lg-auto mb-2 mb-lg-0">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link nav-link-color" href="#about">About</a>
+                                <a class="nav-link nav-link-color" href="#services">Services</a>
+                                <a class="nav-link nav-link-color" href="#projects">Projects</a>
+                                <a class="nav-link nav-link-color" href="#contact">Contact us</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="#">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#">Contact</a>
+                            <li class="navbar-default ms-lg-auto pt-5 pt-lg-2">
+                                <a href="https://github.com/Catari02/trabajo-final">
+                                    Clase 10
+                                    <span class="px-2 fab fa-github"></span>
+                                </a>
                             </li>
                         </ul>
-                        <span class="nav-item ms-auto">
-                            <a href="#your-link">
-                                <span class="fab fa-github"></span>
-                            </a>
-                            <a href="#your-link">
-                                <span class="fab fa-twitter"></span>
-                            </a>
-                            <a href="#your-link">
-                                <span class="fab fa-instagram"></span>
-                            </a>
-                        </span>
                     </div>
                 </div>
             </nav>
@@ -79,7 +67,7 @@
                 </div>
             </div>
 
-            <section class="my-md-5 py-5">
+            <section id="services" class="my-md-5 py-5">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 text-center services-title">
@@ -148,112 +136,143 @@
                 </div>
             </section>
             <section>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 text-center my-5">
-                            <h1 class="text-uppercase display-5 fw-bold">Projects</h1>
-                            <p class="para">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam blandit vestibulum diam, nec maximus dui vulputate quis.
-                            </p>
-                        </div>
+                <div id="projects" class="container">
+                    <div class="content-section-heading text-center">
+                        <h3 class="text-secondary mb-0">Portfolio</h3>
+                        <h1 class="mb-5 display-5 fw-bold">Recent Projects</h1>
                     </div>
-
-                    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-                        <div class="me-md-3" style="background: url(img/imagen-de-referencia.jpg); background-size: cover;">
-                            <a class="btn btn-outline-dark text-center overflow-hidden pt-3 px-3 pt-md-5 px-md-5" href="#" style="opacity: 0.7; width: 100%; height: 100%;">
-                                <div class="my-3 p-3" style="min-height: 31rem;">
-                                    <h2 class="display-5">Project 1</h2>
-                                    <p class="lead">Project details</p>
+                    <div class="row g-3">
+                        <div class="col-lg-4">
+                            <div class="transition">
+                                <div class="image position-relative">
+                                    <img src="img/imagen-de-referencia.jpg" alt="portfolio-image" class="img-fluid w-100 d-block" />
+                                    <div class="overlay-transition">
+                                        <div class="overlay-inner-transition">
+                                            <a class="text-center" href="page.html">
+                                                <h5 class="mb-0 text-white">Painting</h5>
+                                                <p>Design</p>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="transition">
+                                <div class="image position-relative">
+                                    <img src="img/imagen-de-referencia.jpg" alt="portfolio-image" class="img-fluid w-100 d-block" />
+                                    <div class="overlay-transition">
+                                        <div class="overlay-inner-transition">
+                                            <a class="text-center" href="page.html">
+                                                <h5 class="mb-0 text-white">Painting</h5>
+                                                <p>Design</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="transition">
+                                <div class="image position-relative">
+                                    <img src="img/imagen-de-referencia.jpg" alt="portfolio-image" class="img-fluid w-100 d-block" />
+                                    <div class="overlay-transition">
+                                        <div class="overlay-inner-transition">
+                                            <a class="text-center" href="page.html">
+                                                <h5 class="mb-0 text-white">Painting</h5>
+                                                <p>Design</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="me-md-3" style="background: url(img/imagen-de-referencia.jpg); background-size: cover;">
-                            <a class="btn btn-outline-danger text-center overflow-hidden pt-3 px-3 pt-md-5 px-md-5" href="#" style="opacity: 0.7; width: 100%; height: 100%;">
-                                <div class="my-3 p-3" style="min-height: 31rem;">
-                                    <h2 class="display-5">Project 2</h2>
-                                    <p class="lead">Project details</p>
+                        <div class="col-lg-4">
+                            <div class="transition">
+                                <div class="image position-relative">
+                                    <img src="img/imagen-de-referencia.jpg" alt="portfolio-image" class="img-fluid w-100 d-block" />
+                                    <div class="overlay-transition">
+                                        <div class="overlay-inner-transition">
+                                            <a class="text-center" href="page.html">
+                                                <h5 class="mb-0 text-white">Painting</h5>
+                                                <p>Design</p>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-                        <div class="me-md-3" style="background: url(img/imagen-de-referencia.jpg); background-size: cover;">
-                            <a class="btn btn-outline-danger text-center overflow-hidden pt-3 px-3 pt-md-5 px-md-5" href="#" style="border: 0px; opacity: 0.7; width: 100%; height: 100%;">
-                                <div class="my-3 p-3" style="min-height: 31rem;">
-                                    <h2 class="display-5">Project 3</h2>
-                                    <p class="lead">Project details</p>
+                        <div class="col-lg-4">
+                            <div class="transition">
+                                <div class="image position-relative">
+                                    <img src="img/imagen-de-referencia.jpg" alt="portfolio-image" class="img-fluid w-100 d-block" />
+                                    <div class="overlay-transition">
+                                        <div class="overlay-inner-transition">
+                                            <a class="text-center" href="page.html">
+                                                <h5 class="mb-0 text-white">Painting</h5>
+                                                <p>Design</p>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
-
-                        <div class="me-md-3" style="background: url(img/imagen-de-referencia.jpg); background-size: cover;">
-                            <a class="btn btn-outline-dark text-center overflow-hidden pt-3 px-3 pt-md-5 px-md-5" href="#" style="border: 0px; opacity: 0.7; width: 100%; height: 100%;">
-                                <div class="my-3 p-3" style="min-height: 31rem;">
-                                    <h2 class="display-5">Project 4</h2>
-                                    <p class="lead">Project details</p>
+                        <div class="col-lg-4">
+                            <div class="transition">
+                                <div class="image position-relative">
+                                    <img src="img/imagen-de-referencia.jpg" alt="portfolio-image" class="img-fluid w-100 d-block" />
+                                    <div class="overlay-transition">
+                                        <div class="overlay-inner-transition">
+                                            <a class="text-center" href="page.html">
+                                                <h5 class="mb-0 text-white">Painting</h5>
+                                                <p>Design</p>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-                        <div class="me-md-3" style="background: url(img/imagen-de-referencia.jpg); background-size: cover;">
-                            <a class="btn btn-outline-dark text-center overflow-hidden pt-3 px-3 pt-md-5 px-md-5" href="#" style="border: 0px; opacity: 0.7; width: 100%; height: 100%;">
-                                <div class="my-3 p-3" style="min-height: 31rem;">
-                                    <h2 class="display-5">Project 5</h2>
-                                    <p class="lead">Project details</p>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="me-md-3" style="background: url(img/imagen-de-referencia.jpg); background-size: cover;">
-                            <a class="btn btn-outline-danger text-center overflow-hidden pt-3 px-3 pt-md-5 px-md-5" href="#" style="border: 0px; opacity: 0.7; width: 100%; height: 100%;">
-                                <div class="my-3 p-3" style="min-height: 31rem;">
-                                    <h2 class="display-5">Project 6</h2>
-                                    <p class="lead">Project details</p>
-                                </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <footer class="container py-5">
+                <footer class="container py-5 my-5">
                     <div id="contact" class="form-1 bg-gray">
                         <div class="container">
                             <div class="row">
+                                <h2>Let's Work Together!</h2>
                                 <div class="col-lg-6">
                                     <div class="text-container">
-                                        <h2>Get in touch!</h2>
                                         <p class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam blandit vestibulum diam, nec maximus dui vulputate quis.</p>
 
                                         <ul class="list-unstyled li-space-lg">
-                                            <li>Profe, el contenido de la página puede ser en inglés o en español? queda a decisión nuestra?</li>
+                                            <li>22 Innovative, San Francisco, CA 94043, US</li>
+                                            <li>+40 721 455 377</li>
+                                            <li>+40 721 455 377</li>
                                             <li><a class="danger-link" href="mailto:office@domain.com">office@domain.com</a></li>
                                             <li><a class="orange no-line" href="#your-link">www.domain.com</a></li>
                                         </ul>
 
                                         <div class="social-icons">
                                             <span class="fa-stack">
-                                                <a href="#your-link">
+                                                <a href="https://github.com/Catari02">
                                                     <i class="fas fa-circle fa-stack-2x"></i>
                                                     <i class="fab fa-github fa-stack-1x"></i>
                                                 </a>
                                             </span>
                                             <span class="fa-stack">
-                                                <a href="#your-link">
+                                                <a href="https://twitter.com/AtariTatari">
                                                     <i class="fas fa-circle fa-stack-2x"></i>
                                                     <i class="fab fa-twitter fa-stack-1x"></i>
                                                 </a>
                                             </span>
                                             <span class="fa-stack">
-                                                <a href="#your-link">
+                                                <a href="https://pin.it/4RR7P82">
                                                     <i class="fas fa-circle fa-stack-2x"></i>
                                                     <i class="fab fa-pinterest-p fa-stack-1x"></i>
                                                 </a>
                                             </span>
                                             <span class="fa-stack">
-                                                <a href="#your-link">
+                                                <a href="https://www.instagram.com/alice_ink02/">
                                                     <i class="fas fa-circle fa-stack-2x"></i>
                                                     <i class="fab fa-instagram fa-stack-1x"></i>
                                                 </a>
@@ -263,6 +282,14 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <form class="row g-3 target="_blank" action="https://formsubmit.co/36dddbbd7c4b28b40631df1bb72b7203" method="POST">
+                                        <!-- honeypot -->
+                                        <input type="text" name="_honey" style="display: none;">
+
+                                        <!-- Disable captcha -->
+                                        <input type="hidden" name="_captcha" value="false">
+
+                                        <input type="hidden" name="_next" value="https://catari02.github.io/trabajo-final/success.html">
+
                                         <div class="col-12">
                                             <label for="yourname" class="form-label">Your Name</label>
                                             <input type="text" class="form-control" name="name" id="yourname" required />
@@ -283,55 +310,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row" id="copyright">
-                        <div class="col pt-3">
-                            <p class="d-flex justify-content-between align-items-center small"><a href="https://github.com/Catari02">Catalina Rivera</a> <a href="https://github.com/Catari02/trabajo-final">Clase 10</a></p>
-                        </div>
-                    </div>
+                    <button type="button" class="btn btn-outline-dark btn-floating btn-lg" id="btn-back-to-top" style="border-radius: 50%;">
+                        <i class="fas fa-arrow-up"></i>
+                    </button>
                 </footer>
+                <div class="row bg-dark bg-opacity-10 w-100">
+                    <div class="col pt-3">
+                        <p class="small text-center"><a href="https://github.com/Catari02">Página hecha por Catalina Rivera</a></p>
+                    </div>
+                </div>
             </section>
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
-            <script>
-                var id = "lines";
-                var element = document.getElementById(id);
-                var content = ["designer", "ilustrator", "developer"];
-
-                var p = 100;
-
-                const instance = new TypeIt("#lines", { loop: true });
-
-                for (const str of content) {
-                    instance
-                        .type(str)
-                        .pause(p)
-                        .delete(0 - str.length);
-                }
-
-                instance.go();
-            </script>
-            <script>
-                let mybutton = document.getElementById("btn-back-to-top");
-
-                window.onscroll = function () {
-                    scrollFunction();
-                };
-
-                function scrollFunction() {
-                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                        mybutton.style.display = "block";
-                    } else {
-                        mybutton.style.display = "none";
-                    }
-                }
-                mybutton.addEventListener("click", backToTop);
-
-                function backToTop() {
-                    document.body.scrollTop = 0;
-                    document.documentElement.scrollTop = 0;
-                }
-            </script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="scripts.js"></script>
         </main>
     </body>
 </html>

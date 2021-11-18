@@ -9,68 +9,196 @@
         <link href="styles.css" rel="stylesheet" type="text/css" />
         <!--basado en https://startbootstrap.com/snippets/portfolio-item-->
     </head>
-    <!-- Page Content -->
-<div class="container">
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid px-3 px-md-5">
+                <a class="navbar-brand px-3" href="index.html"><img src="img/logo.svg" alt="Logo" title="Logo" height="30" class="d-block mx-auto" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-center pt-5 pt-lg-0" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <ul class="navbar-nav justify-content-between">
+                        <li class="navbar-nav me-lg-auto mb-2 mb-lg-0">
+                            <a class="nav-link active" aria-current="page" href="#">Projects</a>
+                            <a class="nav-link nav-link-color" href="index.html">Home</a>
+                            <a class="nav-link nav-link-color" href="#related">Related Projects</a>
+                            <a class="nav-link nav-link-color" href="#contact">Contact us</a>
+                        </li>
+                        <li class="navbar-default ms-lg-auto pt-5 pt-lg-2">
+                            <a href="https://github.com/Catari02/trabajo-final">
+                                Clase 10
+                                <span class="px-2 fab fa-github"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Portfolio Item Heading -->
+        <h1 class="my-4">
+            Page Heading
+            <small>Secondary Text</small>
+        </h1>
 
-    <!-- Portfolio Item Heading -->
-    <h1 class="my-4">Page Heading
-      <small>Secondary Text</small>
-    </h1>
-  
-    <!-- Portfolio Item Row -->
-    <div class="row">
-  
-      <div class="col-md-8">
-        <img class="img-fluid" src="img/imagen-de-referencia.jpg" alt="">
-      </div>
-  
-      <div class="col-md-4">
-        <h3 class="my-3">Project Description</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
-        <h3 class="my-3">Project Details</h3>
-        <ul>
-          <li>Lorem Ipsum</li>
-          <li>Dolor Sit Amet</li>
-          <li>Consectetur</li>
-          <li>Adipiscing Elit</li>
-        </ul>
-      </div>
-  
+        <!-- Portfolio Item Row -->
+        <div class="row">
+            <div id="carouselExampleControls" class="col-md-8 carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/nomadas-de-gaia-mockup1.png" class="d-block w-100" alt="..." />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/nomadas-de-gaia-mockup2.png" class="d-block w-100" alt="..." />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/nomadas-de-gaia-mockup3.png" class="d-block w-100" alt="..." />
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/nomadas-de-gaia-mockup4.png" class="d-block w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/nomadas-de-gaia-mockup5.png" class="d-block w-100" alt="..." />
+                  </div>
+                  <div class="carousel-item">
+                      <img src="img/nomadas-de-gaia-mockup6.png" class="d-block w-100" alt="..." />
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="col-md-4">
+                <h3 class="my-3">Project Description</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu
+                    convallis placerat, felis enim.
+                </p>
+                <h3 class="my-3">Project Details</h3>
+                <ul>
+                    <li>Lorem Ipsum</li>
+                    <li>Dolor Sit Amet</li>
+                    <li>Consectetur</li>
+                    <li>Adipiscing Elit</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Related Projects Row -->
+        <h3 class="my-4" id="related">Related Projects</h3>
+
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <a href="#">
+                    <img class="img-fluid" src="img/imagen-de-referencia.jpg" alt="" />
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <a href="#">
+                    <img class="img-fluid" src="img/imagen-de-referencia.jpg" alt="" />
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <a href="#">
+                    <img class="img-fluid" src="img/imagen-de-referencia.jpg" alt="" />
+                </a>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <a href="#">
+                    <img class="img-fluid" src="img/imagen-de-referencia.jpg" alt="" />
+                </a>
+            </div>
+        </div>
+        <!-- /.row -->
     </div>
-    <!-- /.row -->
-  
-    <!-- Related Projects Row -->
-    <h3 class="my-4">Related Projects</h3>
-  
-    <div class="row">
-  
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-              <img class="img-fluid" src="img/imagen-de-referencia.jpg" alt="">
-            </a>
-      </div>
-  
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-              <img class="img-fluid" src="img/imagen-de-referencia.jpg" alt="">
-            </a>
-      </div>
-  
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-              <img class="img-fluid" src="img/imagen-de-referencia.jpg" alt="">
-            </a>
-      </div>
-  
-      <div class="col-md-3 col-sm-6 mb-4">
-        <a href="#">
-              <img class="img-fluid" src="img/imagen-de-referencia.jpg" alt="">
-            </a>
-      </div>
-  
-    </div>
-    <!-- /.row -->
-  
-  </div>
-  <!-- /.container -->
+    <footer class="container py-5 my-5">
+        <div id="contact" class="form-1 bg-gray">
+            <div class="container">
+                <div class="row">
+                    <h2>Let's Work Together!</h2>
+                    <div class="col-md-4 col-lg-4 pt-1 d-md-block d-lg-flex d-flex">
+                        <i class="fas fa-phone"></i>
+                      <div class="contact-box__info">
+                        <a href="#" class="contact-box__info--title">+1 728365413</a>
+                        <p class="contact-box__info--subtitle">  Mon-Fri 9am-6pm</p>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+                        <i class="fas fa-envelope"></i>
+                      <div class="contact-box__info">
+                        <a href="#" class="contact-box__info--title">info@company.com</a>
+                        <p class="contact-box__info--subtitle">Online support</p>
+                      </div>
+                    </div>
+                    <div class="col-md-4 col-lg-4 contact-box pt-1 d-md-block d-lg-flex d-flex">
+                      <div class="contact-box__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-2" viewBox="0 0 24 24" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <line x1="18" y1="6" x2="18" y2="6.01"></line>
+                          <path d="M18 13l-3.5 -5a4 4 0 1 1 7 0l-3.5 5"></path>
+                          <polyline points="10.5 4.75 9 4 3 7 3 20 9 17 15 20 21 17 21 15"></polyline>
+                          <line x1="9" y1="4" x2="9" y2="17"></line>
+                          <line x1="15" y1="15" x2="15" y2="20"></line>
+                        </svg>
+                      </div>
+                      <div class="contact-box__info">
+                        <a href="#" class="contact-box__info--title">New York, USA</a>
+                        <p class="contact-box__info--subtitle">NY 10012, US</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-outline-dark btn-floating btn-lg" id="btn-back-to-top" style="border-radius: 50%;">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+    <div class="h-100 bg-dark footer-sm">
+        <div class="container">
+          <div class="row py-4 text-center text-white">
+            <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+              connect with us on social media
+            </div>
+            <div class="social-icons">
+              <span class="fa-stack">
+                  <a href="https://github.com/Catari02">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-github fa-stack-1x"></i>
+                  </a>
+              </span>
+              <span class="fa-stack">
+                  <a href="https://twitter.com/AtariTatari">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-twitter fa-stack-1x"></i>
+                  </a>
+              </span>
+              <span class="fa-stack">
+                  <a href="https://pin.it/4RR7P82">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                  </a>
+              </span>
+              <span class="fa-stack">
+                  <a href="https://www.instagram.com/alice_ink02/">
+                      <i class="fas fa-circle fa-stack-2x"></i>
+                      <i class="fab fa-instagram fa-stack-1x"></i>
+                  </a>
+              </span>
+          </div>
+          <div class="col pt-3">
+            <p class="small text-center">AUD5V0010-1 2021 | Created by <a href="https://github.com/Catari02" target="_blank">Catalina Rivera</a></p>
+        </div>
+          </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>

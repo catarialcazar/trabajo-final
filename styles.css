@@ -13,10 +13,14 @@ p {
     font: 400 1rem/1.625rem "Lora";
 }
 
+
+
+
+
 /* ----- Home ----- */
 
 #myname-container {
-    background: linear-gradient(45deg, #ffa3b5 10%, #8094dd 70%), url(img/imagen-de-referencia.jpg);
+    background: linear-gradient(45deg, #ffa3b5 10%, #8ea9f6 70%), url(img/imagen-de-referencia.jpg);
     background-blend-mode: color;
     background-size: cover;
 }
@@ -25,6 +29,18 @@ p {
     width: 100%;
     height: auto;
 }
+
+/* ----- Portafolio ----- */
+
+#services {
+    background-color: rgba(142,169,246, 0.3)
+}
+
+
+#services .card-title {
+    color: #676861
+}
+
 
 /* ----- Offcanvas menu ----- */
 
@@ -47,59 +63,48 @@ p {
     }
 }
 
+
+
+
+
 /* ----- Links/buttons/project section ----- */
 
 /*style of the back-to-top button*/
 
 #btn-back-to-top {
     position: fixed;
-    bottom: 70px;
+    bottom: 30px;
     right: 30px;
     display: none;
-}
-
-.btn-outline-dark {
     color: #f29bb2;
     background-color: none;
     border: none;
 }
 
-.btn-outline-dark:hover {
+#btn-back-to-top:hover {
     color: #fff;
     background-color: #f29bb2;
     border-color: #f0809e;
 }
 
-.btn-outline-dark:focus,
-.btn-outline-dark.focus {
-    box-shadow: 0 0 0 3px rgba(255, 163, 181, 1);
+.btn:focus {
+    /* offset-x | offset-y | blur-radius | spread-radius | color :DDDD */
+    box-shadow: 0 0 0 4px rgba(255, 163, 181, 1);
 }
 
-.btn-outline-dark.disabled,
-.btn-outline-dark:disabled {
-    background-color: #f29bb2;
-    border-color: #f29bb2;
-}
-
-.btn-outline-dark:active,
-.btn-outline-dark.active,
-.show > .btn-outline-dark.dropdown-toggle {
-    background-color: #f0809e;
-    background-image: none;
-    border-color: #f0809e;
-}
+/*style of the other buttons and links*/
 
 a {
     color: #676861;
     text-decoration: none;
 }
 
-.nav-link-color:hover {
-    color: #f29bb2 !important;
-}
-
 a:hover {
     color: #f29bb2;
+}
+
+.nav-link-color:hover {
+    color: #f29bb2 !important;
 }
 
 .btn-outline-danger {
@@ -111,61 +116,42 @@ a:hover {
     border: 0px;
 }
 
-.flex-equal > * {
-    flex: 1;
-}
-@media (min-width: 768px) {
-    .flex-md-equal > * {
-        flex: 1;
-    }
-}
 
- ----- Contact 
 
-.form-1 {
-    padding-top: 8.25rem;
-    padding-bottom: 7.25rem;
-}
 
-.form-1 .text-container {
-    margin-bottom: 4.5rem;
-}
 
-.form-1 h2 {
-    margin-bottom: 0.75rem;
-}
 
-.form-1 .sub-heading {
-    margin-bottom: 2.25rem;
-}
+ /*----- Contact -----*/
 
-.form-1 .list-unstyled {
-    margin-bottom: 2rem;
-}
-
-.form-1 .fa-stack {
+ .contact-icons .fa-stack {
     width: 2em;
     margin-right: 0.25rem;
     font-size: 1.5rem;
 }
 
-.form-1 .fa-stack-2x {
+.contact-icons .fa-stack-2x {
     color: #f29bb2;
     transition: all 0.2s ease;
 }
 
-.form-1 .fa-stack-1x {
+.contact-icons .fa-stack-1x {
     color: #ffffff;
     transition: all 0.2s ease;
 }
 
-.form-1 .fa-stack:hover .fa-stack-2x {
+.contact-icons .fa-stack:hover .fa-stack-2x {
     color: #8298d9;
 }
 
-.form-1 .fa-stack:hover .fa-stack-1x {
+.contact-icons .fa-stack:hover .fa-stack-1x {
     color: #ffffff;
-}----- */
+}
+
+
+
+
+
+
 
 /* ----- Portfolio transition ----- */
 
@@ -174,7 +160,7 @@ a:hover {
     content: "";
     height: 100%;
     width: 100%;
-    background: #8094dd;
+    background: #8ea9f6;
     left: 0;
     top: 0;
     -webkit-transform: scaleX(0);

@@ -1,7 +1,7 @@
 // Typing effect:
 var id = "lines";
 var element = document.getElementById(id);
-var content = ["designer", "ilustrator", "developer"];
+var content = ["diseñadora gráfica", "ilustradora", "diseñadora UI"];
 
 var p = 1000;
 
@@ -15,6 +15,9 @@ for (const str of content) {
 }
 
 instance.go();
+
+
+
 
 // Back to Top:
 let mybutton = document.getElementById("btn-back-to-top");
@@ -36,6 +39,9 @@ function backToTop() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+
+
 
 // Offcanvas menu:
 (function mainScript() {

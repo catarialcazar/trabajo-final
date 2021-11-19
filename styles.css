@@ -30,17 +30,42 @@ p {
     height: auto;
 }
 
-/* ----- Portafolio ----- */
-
-#services {
-    background-color: rgba(142,169,246, 0.3)
-}
-
+/* ----- servicios ----- */
 
 #services .card-title {
     color: #676861
 }
 
+.services-icons .fa-stack {
+    width: 2em;
+    margin-right: 0.25rem;
+    font-size: 1.5rem;
+}
+
+.services-icons .fa-stack-2x {
+    color: #f29bb2;
+    transition: all 0.2s ease;
+}
+
+.services-icons .fa-stack-1x {
+    color: #ffffff;
+}
+
+/* ----- Call to action  ----- */
+
+#call-to-action h2 {
+	text-transform: none;
+	font-size: 42px;
+	line-height: 46px;
+	letter-spacing: -1px;
+	max-width: 500px;
+	margin: 20px auto 40px auto;
+}
+
+#call-to-action {
+	background: rgba(142,169,246, 1);
+	color: #fff;
+}
 
 /* ----- Offcanvas menu ----- */
 
@@ -160,6 +185,7 @@ a:hover {
     content: "";
     height: 100%;
     width: 100%;
+    border-radius: 5px;
     background: #8ea9f6;
     left: 0;
     top: 0;
@@ -175,6 +201,7 @@ a:hover {
     content: "";
     height: 100%;
     width: 100%;
+    border-radius: 5px;
     background: #f29bb2;
     left: 0;
     top: 0;

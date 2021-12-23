@@ -1,48 +1,48 @@
-// Typing effect:
-var id = "lines";
-var element = document.getElementById(id);
-var content = ["diseñadora gráfica", "ilustradora", "diseñadora UI"];
-
-var p = 1000;
-
-const instance = new TypeIt("#lines", { loop: true });
-
-for (const str of content) {
-    instance
-        .type(str)
-        .pause(p)
-        .delete(0 - str.length);
-}
-
-instance.go();
-
-// Back to Top:
-let mybutton = document.getElementById("btn-back-to-top");
-
-window.onscroll = function () {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
-mybutton.addEventListener("click", backToTop);
-
-function backToTop() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-
 // Offcanvas menu:
 (function mainScript() {
     "use strict";
     const offcanvasToggle = document.querySelector('[data-bs-toggle="offcanvas"]');
-    const offcanvasCollapse = document.querySelector(".offcanvas-collapse");
+
     offcanvasToggle.addEventListener("click", function () {
-        offcanvasCollapse.classList.toggle("open");
     });
 })();
+
+let navLinks = document.getElementsByClassName('nav-link');
+for (let i = 0; i < navLinks.length; i++) {
+    navLinks[i].addEventListener('click', hideAfter);
+};
+function hideAfter(){
+    document.getElementById("offcanvasRight").classList.remove('show');
+    document.querySelector('.offcanvas-backdrop').classList.remove('show');
+}
+
+//FormSubmit:
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("btnContactUs").onclick = function () {
+        const userName = document.getElementById("name").value;
+        const userEmail = document.getElementById("email").value;
+        const userMessage = document.getElementById("message").value;
+        const url = "https://formsubmit.co/ajax/36dddbbd7c4b28b40631df1bb72b7203";
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", url, true);
+        xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+        xhr.addEventListener("load", function (event) {
+            document.getElementById("reused_form").style.display = "none";
+            document.getElementById("success_message").style.display = "";
+        });
+
+        xhr.addEventListener("error", function (event) {
+            document.getElementById("reused_form").style.display = "none";
+            document.getElementById("error_message").style.display = "";
+        });
+        const body = JSON.stringify({ Name: userName, Email: userEmail, Message: userMessage });
+        xhr.send(body);
+    };
+});
+
+//Popover:
+var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  return new bootstrap.Popover(popoverTriggerEl)
+})

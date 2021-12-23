@@ -1,0 +1,114 @@
+body {
+    background-color: #f8f9fa;
+}
+
+#breadcrumb{
+    margin-top: 4.5rem;
+    margin-left: 10vw;
+}
+
+
+#carousel1 .carousel-item{
+    height: 40vw;
+}
+#carousel1 .carousel-item img{
+    height: auto;
+}
+#carousel1 .carousel-indicators{
+    top: 28vw;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#indicatorP1{
+    padding-top: 10vw;
+}
+#indicatorP2{
+    padding-top: 2vw;
+}
+#indicatorP3-6{
+    padding-top: 3vw;
+}
+#indicatorP5{
+    padding-top: 4vw;
+}
+@media only screen and (max-width: 767px) {
+    #indicatorP2{
+        padding-top: 13vw;
+    }
+    #indicatorP3-6{
+        padding-top: 13vw;
+    }
+    #indicatorP5{
+        padding-top: 14vw;
+    }
+    #indicatorP7{
+        padding-top: 14vw;
+    }
+}
+#carousel1 .carousel-indicators button{
+    width: 100%;
+}
+
+
+#gallery .row1 img {
+    object-fit: cover;
+    height: 600px;
+}
+#gallery .row2 img {
+    object-fit: cover;
+    height: 540px;
+}
+
+#gallery .rowextra img {
+    object-fit: cover;
+    height: 430px;
+    margin-bottom: 3rem;
+}
+
+
+@media only screen and (max-width: 991px) {
+    #gallery .row1 img {
+        height: auto;
+    }
+    #gallery .row2 img {
+        height: auto;
+    }
+    #gallery .rowextra img {
+        height: auto;
+    }
+}
+
+.distopia-img1:hover {
+    content: url("img/distopia-main05.jpg");
+}
+.distopia-img2:hover {
+    content: url("img/distopia-main06.jpg");
+}
+.distopia-img3:hover {
+    content: url("img/distopia-main07.jpg");
+}
+.distopia-img4:hover {
+    content: url("img/distopia-main08.jpg");
+}
+
+#description-bg {
+    background-color: #a8bbf0;
+    margin-top: 10rem;
+}
+
+.carousel-nav-icon {
+    height: 7rem;
+    width: 7vw;
+    font-size: 4rem;
+}
+
+.carousel-item .col, .col-sm, .col-md {
+    margin: 8px;
+    height: 16rem;
+    background-size: cover;
+    background-position: center center;
+}
+
+#related{
+    margin-bottom: 10rem;
+}

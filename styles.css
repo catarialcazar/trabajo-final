@@ -578,7 +578,19 @@ a:hover {
 #call-to-action i {
     color: #F19DB6;
     font-size: 3.5rem;
+    animation: heartbeat 2s infinite;
 }
+
+@keyframes heartbeat {
+    0% {transform: scale(1);}
+    25% {transform: scale(.97);}
+    35% {transform: scale(.9);}
+    45% {transform: scale(1.15);}
+    55% {transform: scale(.9);}
+    65% {transform: scale(1.15);}
+    75% {transform: scale(1);}
+    100% {transform: scale(1);}
+  }
 
 /* -------------------------------------- */
 

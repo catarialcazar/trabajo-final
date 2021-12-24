@@ -575,6 +575,10 @@ a:hover {
 	border-radius: 28px;
 }
 
+#call-to-action i {
+    color: #F19DB6;
+    font-size: 3.5rem;
+}
 
 /* -------------------------------------- */
 

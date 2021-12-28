@@ -1,7 +1,7 @@
 // Typing effect:
 var id = "lines";
 var element = document.getElementById(id);
-var content = ["diseñadora gráfica", "ilustradora", "diseñadora UI"];
+var content = ["editorial", "publicitaria", "conceptual"];
 
 var p = 1000;
 
